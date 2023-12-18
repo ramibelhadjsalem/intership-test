@@ -1,0 +1,33 @@
+.field-item{
+    padding: 5px ;
+    user-select: none;
+  
+}
+.field-item .field-card p{
+    all: unset;
+}
+.field-item .field-card{
+    border-radius: 6px;
+    padding: 7px;
+    gap: 6px;
+    color: rgb(51, 51, 51);
+    background-color: rgb(247, 247, 250);
+    
+    font-size: 13px;
+}
+.field-item .field-card:hover{
+    box-shadow: 0 0 0 3px rgba(52,152,255,.25);
+}
+.field-item .field-card p{
+    color: rgb(51, 51, 51);
+    font-family: Arial, sans-serif;
+}
+.test{
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}

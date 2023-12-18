@@ -1,0 +1,26 @@
+.props-tab-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .props-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 5px;
+  }
+  
+  .props-item {
+    margin-bottom: 5px;
+    color: rgb(51, 51, 51);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+  }
+
+ 

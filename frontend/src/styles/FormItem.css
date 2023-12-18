@@ -1,0 +1,26 @@
+.form-card{
+    background-color: cornsilk;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.form-card .icons{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 17px;
+   
+}
+.form-card .icons button{
+    all: unset;
+}
+.form-card .icons .delete-icon:hover{
+    color: red;
+}
+.form-card .icons .edit-icon:hover{
+    color: rgb(52, 243, 52);
+}
+.form-card .form-footer{
+    border-top: 1px solid rgb(185, 185, 185);
+    font-size: 13px;
+}

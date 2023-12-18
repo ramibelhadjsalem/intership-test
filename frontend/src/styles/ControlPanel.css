@@ -1,0 +1,21 @@
+.form-element-container {
+  transition: border 0.3s ease-in-out;
+  border: 2px dashed #ffffff00;
+}
+
+.form-element-container:hover {
+  border-color: #007bff;
+
+}
+
+.cursur-pointer :hover {
+  cursor: pointer;
+}
+
+.leftsidecontainer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  height: 100%;
+}
