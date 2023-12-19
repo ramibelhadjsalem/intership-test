@@ -1,9 +1,9 @@
-import { useState } from "react";
+
 import { FormElementProps, FormElements } from "../../../../models/FormElementType";
 
-export const TextAreaComponent = ({ element }: { element: FormElements }) => {
+export const TextAreaComponent = ({ element,setInputsData }: { element: FormElements ,setInputsData? :(name:string,value:string)=>void }) => {
     const props: Partial<FormElementProps> = element.props
-    const [textareaValue, setTextareaValue] = useState<string>('');
+   
     const containerStyle = {
         marginBottom: '16px',
     };
@@ -20,9 +20,10 @@ export const TextAreaComponent = ({ element }: { element: FormElements }) => {
         borderRadius: '4px',
         borderColor: '#ccc',
     };
-    const handleTextareaChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setTextareaValue(event.target.value);
-        console.log(textareaValue);
+    const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        if(setInputsData){
+            setInputsData(e.target.name,e.target.value)
+        }
         
     };
     return (
@@ -33,6 +34,7 @@ export const TextAreaComponent = ({ element }: { element: FormElements }) => {
                 id="textarea"
                 placeholder={props.placeholder}
                 style={textareaStyle}
+                name={element.name}
                 onChange={handleTextareaChange}
             ></textarea>
         </div>

@@ -38,3 +38,16 @@ export const getFormById =async (id:string) =>{
         console.error("error get forms",error)
     }
 }
+export interface saveReponcesDataType{
+    _form_id :string,
+    reponses : Record<string,any>
+}
+export const saveFormReponces =async (data:saveReponcesDataType) =>{
+    try {
+        const respnse  = await axios.post(baseUrl+"forms/reponce",data)
+        return respnse.data ;
+        
+    } catch (error) {
+        console.error("error get forms",error)
+    }
+}

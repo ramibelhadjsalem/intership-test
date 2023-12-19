@@ -9,11 +9,8 @@ const PropsTab: React.FC<{ element: FormElements }> = ({ element }) => {
 
 
     const [state, setState] = useState<Partial<FormElementProps>>(element.props)
+    
     const handleInputValueChange = (key: string, newValue: string) => {
-        // setState((prevState) => ({
-        //   ...prevState,
-        //   [key]: newValue,
-        // }));
         let newProps: Partial<FormElementProps> = element.props
         newProps = {
             ...element.props,
@@ -43,7 +40,7 @@ const PropsTab: React.FC<{ element: FormElements }> = ({ element }) => {
                         <label>{key}</label>
                         <input
                             type="text"
-                            // value={value as string}
+                            placeholder={value as string}
                             onChange={(e) => handleInputValueChange(key, e.target.value)}
                             key={key}
                             

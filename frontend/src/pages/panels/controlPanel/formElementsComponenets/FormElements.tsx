@@ -9,25 +9,25 @@ import { InputComponent, NumberFormatComponent } from "./InputFormElement";
 import { TextAreaComponent } from "./TextAreaFormElement";
 import ButtonFormEelement from "./ButtonFormEelement";
 
-export const getComponentByType = (element: FormElements) => {
+export const getComponentByType = (element: FormElements,setInputsData?:(key:string,value:any)=>void) => {
     switch (element.type) {
         case 'Text':
             return <TextFormElement element={element} />;
 
         case 'Checkbox':
-            return <CheckBoxFormElement element={element} />;
+            return <CheckBoxFormElement element={element} setInputsData={setInputsData}/>;
         case 'Input':
-            return <InputComponent element={element} />;
+            return <InputComponent element={element} setInputsData={setInputsData} />;
         case 'Number Format':
-            return <NumberFormatComponent element={element} />;
+            return <NumberFormatComponent element={element} setInputsData={setInputsData}/>;
         case 'Text area':
-            return <TextAreaComponent element={element} />;
+            return <TextAreaComponent element={element} setInputsData={setInputsData}/>;
         case 'Radio group':
-            return <RadioGroupFormElement element={element}/>;
+            return <RadioGroupFormElement element={element} setInputsData={setInputsData}/>;
         case 'DropDown':
-            return <DropdownComponent element={element}/>;
+            return <DropdownComponent element={element} setInputsData={setInputsData}/>;
         case 'Uploader':
-            return <UploaderComponent element={element}/>;
+            return <UploaderComponent element={element} setInputsData={setInputsData}/>;
 
         case "Button" :
                 return <ButtonFormEelement element={element}/>

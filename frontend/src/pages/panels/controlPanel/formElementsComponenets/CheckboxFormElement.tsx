@@ -1,11 +1,14 @@
-import { useState } from "react";
 import { FormElementProps, FormElements } from "../../../../models/FormElementType";
 
-export const CheckBoxFormElement = ({ element }: { element: FormElements }) => {
-    console.log("checkbox eelemet",element);
+export const CheckBoxFormElement = ({ element,setInputsData }: { element: FormElements ,setInputsData? :(name:string,value:string)=>void }) => {
+  
     
-    const handleCheckboxChange = () => {
-       
+    const handleInputChange = (e: any) => {
+        if (setInputsData) {
+            setInputsData(element.name, e.target.checked.toString());
+            console.log(element.name, e.target.checked.toString());
+        }
+        
     };
 
     const styles: Record<string, React.CSSProperties> = element.style
@@ -15,12 +18,11 @@ export const CheckBoxFormElement = ({ element }: { element: FormElements }) => {
             <input
                 type="checkbox"
                 className="custom-checkbox me-3"
-                id="myCheckbox"
-                checked={props.checked}
-                onChange={handleCheckboxChange}
+                id={element.name}
+                onChange={handleInputChange}
                 style={styles.checkbox}
             />
-         {props.label && <label htmlFor="myCheckbox">{props.label}</label>}
+         {props.label && <label htmlFor={element.name}>{props.label}</label>}
         </div>
     )
 }

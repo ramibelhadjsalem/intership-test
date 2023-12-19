@@ -1,6 +1,6 @@
 export default {
     Text: {
-        text :"text"
+        text :"text",
     },
     calender: {
       
@@ -28,6 +28,7 @@ export default {
     'Radio group': {
         label:"choose option",
         options:["option1","option2","option3"]
+        
     },
     DropDown: {
         label:"choose option",
@@ -37,6 +38,7 @@ export default {
         label:"Drop files here",
     },
     Button:{
-
+        type:"submit",
+        text:"Save"
     }
   };
